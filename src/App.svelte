@@ -20,9 +20,9 @@
   //   name = 'ar'
   // }
 
-  function inputNameChange(event) {
-    name = event.target.value.trim();
-  }
+  // function inputNameChange(event) {
+  //   name = event.target.value.trim();
+  // }
 </script>
 
 <style>
@@ -35,4 +35,5 @@
 <h2>Your age is {age}</h2>
 <button on:click="{increaseAge}">Increase Age</button>
 <!-- <button on:click="{changeName}">Change Name</button> -->
-<input type="text" value="{name}" on:input="{inputNameChange}">
+<!-- <input type="text" value="{name}" on:input="{inputNameChange}"> -->
+<input type="text" bind:value="{name}">

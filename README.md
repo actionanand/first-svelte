@@ -118,3 +118,4 @@ surge public my-project.surge.sh
 ### Other Resources
 
 - [Replacement for git clone - degit](https://dev.to/vuelancer/replacement-for-git-clone-degit-3lf1)
+- [npm-run-all NPM Package](https://www.npmjs.com/package/npm-run-all)

@@ -1,48 +1,36 @@
 <script>
-  import ContactCard from './ContactCard.svelte';
+  import ContactCard from "./ContactCard.svelte";
 
-	let name = 'Anand Raja';
-  let title = '';
-  let image = '';
-  let description = '';
-  let age = 27;
-
-  $: upperCaseName = name.toUpperCase(); // svelte will always update whenever variable 'name' changes
-
-  $: console.log(name);
-
-  $: if(name.toLowerCase() === 'ar') {
-      age = 29;
-    } else {
-      age = 27;
-    }
-
-  function increaseAge() {
-    age +=1;
-  }
-
-  // function changeName() {
-  //   name = 'ar'
-  // }
-
-  // function inputNameChange(event) {
-  //   name = event.target.value.trim();
-  // }
+  let name = "Anand";
+  let title = "";
+  let image = "";
+  let description = "";
 </script>
 
 <style>
-	h1 {
-		color: purple;
-	}
+  #form {
+    width: 30rem;
+    max-width: 100%;
+  }
 </style>
 
-<h1>Hello {upperCaseName}!</h1>
-<h2>Your age is {age}</h2>
-<button on:click="{increaseAge}">Increase Age</button>
-<!-- <button on:click="{changeName}">Change Name</button> -->
-<!-- <input type="text" value="{name}" on:input="{inputNameChange}"> -->
-<input type="text" bind:value="{name}" placeholder="name">
-<input type="text" bind:value="{title}" placeholder="job title">
-<input type="text" bind:value="{image}" placeholder="image url">
-<textarea rows="3" bind:value="{description}" placeholder="Please enter the description"></textarea>
-<ContactCard userName="{name}" jobTitle="{title}" {description} userImage="{image}" />
+<div id="form">
+  <div class="form-control">
+    <label for="userName">User Name</label>
+    <input type="text" bind:value={name} id="userName" />
+  </div>
+  <div class="form-control">
+    <label for="jobTitle">Job Title</label>
+    <input type="text" bind:value={title} id="jobTitle" />
+  </div>
+  <div class="form-control">
+    <label for="image">Image URL</label>
+    <input type="text" bind:value={image} id="image" />
+  </div>
+  <div class="form-control">
+    <label for="desc">Description</label>
+    <textarea rows="3" bind:value={description} id="desc" />
+  </div>
+</div>
+
+<ContactCard userName={name} jobTitle={title} {description} userImage={image} />

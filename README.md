@@ -129,3 +129,6 @@ surge public my-project.surge.sh
 1. [Svelte Lifecycle hooks tutorial](https://reactgo.com/svelte-lifecycle-hooks-tutorial/)
 1. [The Component Lifecycle in Svelte](https://betterprogramming.pub/the-component-lifecycle-in-svelte-1784ecab5862)
 1. [Svelte Component Lifecycle Hooks](https://medium.com/swlh/svelte-component-lifecycle-hooks-68cfba7f3c19)
+1. [How to deploy a React, Angular and Vue project to Github pages](https://deepinder.me/how-to-deploy-a-react-angular-vue-project-to-github-pages)
+1. [Deploying a Svelte Application to Github Pages](https://www.devsamples.com/javascript/svelte/deploy-svelte-app-gh-pages)
+> Don't forget to prefix paths in `html` file with `.` before deployment.

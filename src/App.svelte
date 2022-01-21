@@ -5,6 +5,15 @@
   let title = "";
   let image = "";
   let description = "";
+  let formState = 'empty';
+
+  function addContact() {
+    if(name.trim() === '', title.trim() === '', image.trim() === '', description.trim() === '') {
+      formState = 'invalid';
+      return;
+    }
+    formState = 'done'; 
+  }
 </script>
 
 <style>
@@ -25,7 +34,7 @@
   </div>
   <div class="form-control">
     <label for="image">Image URL</label>
-    <input type="text" bind:value={image} id="image" />
+    <input type="url" bind:value={image} id="image" />
   </div>
   <div class="form-control">
     <label for="desc">Description</label>
@@ -33,4 +42,11 @@
   </div>
 </div>
 
-<ContactCard userName={name} jobTitle={title} {description} userImage={image} />
+<button on:click="{addContact}">Add Contact</button>
+{#if formState === 'done'}
+  <ContactCard userName={name} jobTitle={title} {description} userImage={image} />
+{:else if formState === 'invalid'}
+  <p>Invalid Inputs</p>
+{:else}
+  <p>Please fill the form.</p>
+{/if}

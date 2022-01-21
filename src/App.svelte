@@ -1,5 +1,6 @@
 <script>
-  import ContactCard from "./ContactCard.svelte";
+  import ContactCard from './ContactCard.svelte';
+  import LifecycleHooks from './LifecycleHooks.svelte'
 
   let name = "Anand";
   let title = "";
@@ -8,6 +9,17 @@
   let formState = 'empty';
   let createdContacts = [];
   let isFirstElDeleted = false;
+  let isLifeCycleOpen = false;
+
+  $: if(isLifeCycleOpen) {
+    setTimeout(() => {
+      isLifeCycleOpen = false;
+    }, 20000);
+  }
+
+  // $: upperCaseName = name.toUpperCase(); // svelte will always update whenever variable 'name' changes
+
+  // $: console.log(name);
 
   function addContact() {
     if(name.trim() === '', title.trim() === '', image.trim() === '', description.trim() === '') {
@@ -25,6 +37,7 @@
         desc: description
       }]; 
   }
+
   function deleteFirstEl() {
     createdContacts = createdContacts.slice(1);
     isFirstElDeleted = true;
@@ -68,7 +81,12 @@
 
 <button on:click="{addContact}">Add Contact</button>
 <button on:click|once="{deleteFirstEl}">Delete First</button>
-<button on:click="{deleteLastEl}">Delete Last</button>
+<button on:click="{deleteLastEl}">
+  Delete Last
+</button>
+<button on:click="{() => isLifeCycleOpen = !isLifeCycleOpen}">
+  {isLifeCycleOpen? 'Hide ' : 'Show '} Lifecycle Hooks
+</button>
 
 {#if isFirstElDeleted}
   <p><span class="note-style">Delete First</span> button won't work!</p>
@@ -91,3 +109,9 @@
 {:else}
   <p>Please add some contacts. We found none!</p>
 {/each}
+
+<!-- Life cycle hooks -->
+
+{#if isLifeCycleOpen}
+  <LifecycleHooks/>
+{/if}

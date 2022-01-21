@@ -126,3 +126,6 @@ surge public my-project.surge.sh
 1. [Official Docs (each)](https://svelte.dev/tutorial/each-blocks)
 1. [Official Docs (keys)](https://svelte.dev/tutorial/keyed-each-blocks)
 1. [Event Modifier](https://svelte.dev/tutorial/event-modifiers)
+1. [Svelte Lifecycle hooks tutorial](https://reactgo.com/svelte-lifecycle-hooks-tutorial/)
+1. [The Component Lifecycle in Svelte](https://betterprogramming.pub/the-component-lifecycle-in-svelte-1784ecab5862)
+1. [Svelte Component Lifecycle Hooks](https://medium.com/swlh/svelte-component-lifecycle-hooks-68cfba7f3c19)

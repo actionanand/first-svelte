@@ -1,19 +1,22 @@
 <script>
   export let userName;
+  export let jobTitle;
+  export let userImage;
+  export let description;
 </script>
 
 <div class="contact-card">
   <header>
     <div class="thumb">
-      <img src="" alt="" />
+      <img src="{userImage}" alt="{userName}" />
     </div>
     <div class="user-data">
       <h1>{userName}</h1>
-      <h2>Job Title</h2>
+      <h2>{jobTitle}</h2>
     </div>
   </header>
   <div class="description">
-    <p>A short description</p>
+    <p>{description}</p>
   </div>
 </div>
 
@@ -48,6 +51,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 1rem;
   }
 
   h1 {

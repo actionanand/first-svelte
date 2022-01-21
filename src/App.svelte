@@ -6,16 +6,22 @@
 
   $: console.log(name);
 
-  $: if(name === 'ar') {
-    age = 29;
-  }
+  $: if(name.toLowerCase() === 'ar') {
+      age = 29;
+    } else {
+      age = 27;
+    }
 
   function increaseAge() {
     age +=1;
   }
 
-  function changeName() {
-    name = 'ar'
+  // function changeName() {
+  //   name = 'ar'
+  // }
+
+  function inputNameChange(event) {
+    name = event.target.value.trim();
   }
 </script>
 
@@ -28,4 +34,5 @@
 <h1>Hello {upperCaseName}!</h1>
 <h2>Your age is {age}</h2>
 <button on:click="{increaseAge}">Increase Age</button>
-<button on:click="{changeName}">Change Name</button>
+<!-- <button on:click="{changeName}">Change Name</button> -->
+<input type="text" value="{name}" on:input="{inputNameChange}">

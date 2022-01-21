@@ -7,6 +7,7 @@
   let description = "";
   let formState = 'empty';
   let createdContacts = [];
+  let isFirstElDeleted = false;
 
   function addContact() {
     if(name.trim() === '', title.trim() === '', image.trim() === '', description.trim() === '') {
@@ -26,6 +27,7 @@
   }
   function deleteFirstEl() {
     createdContacts = createdContacts.slice(1);
+    isFirstElDeleted = true;
   }
 
   function deleteLastEl() {
@@ -37,6 +39,11 @@
   #form {
     width: 30rem;
     max-width: 100%;
+  }
+  
+  .note-style {
+    color: red;
+    font-weight: bold;
   }
 </style>
 
@@ -60,8 +67,12 @@
 </div>
 
 <button on:click="{addContact}">Add Contact</button>
-<button on:click="{deleteFirstEl}">Delete First</button>
+<button on:click|once="{deleteFirstEl}">Delete First</button>
 <button on:click="{deleteLastEl}">Delete Last</button>
+
+{#if isFirstElDeleted}
+  <p><span class="note-style">Delete First</span> button won't work!</p>
+{/if}
 
 {#if formState === 'invalid'}
   <p>Invalid Inputs</p>

@@ -4,6 +4,12 @@
 
   $: upperCaseName = name.toUpperCase(); // svelte will always update whenever variable 'name' changes
 
+  $: console.log(name);
+
+  $: if(name === 'ar') {
+    age = 29;
+  }
+
   function increaseAge() {
     age +=1;
   }

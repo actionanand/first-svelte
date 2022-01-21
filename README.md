@@ -119,3 +119,9 @@ surge public my-project.surge.sh
 
 - [Replacement for git clone - degit](https://dev.to/vuelancer/replacement-for-git-clone-degit-3lf1)
 - [npm-run-all NPM Package](https://www.npmjs.com/package/npm-run-all)
+
+### Useful Resources & Links
+
+1. [Official Docs (if)](https://svelte.dev/tutorial/if-blocks)
+1. [Official Docs (each)](https://svelte.dev/tutorial/each-blocks)
+1. [Official Docs (keys)](https://svelte.dev/tutorial/keyed-each-blocks)

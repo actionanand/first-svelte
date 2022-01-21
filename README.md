@@ -125,3 +125,4 @@ surge public my-project.surge.sh
 1. [Official Docs (if)](https://svelte.dev/tutorial/if-blocks)
 1. [Official Docs (each)](https://svelte.dev/tutorial/each-blocks)
 1. [Official Docs (keys)](https://svelte.dev/tutorial/keyed-each-blocks)
+1. [Event Modifier](https://svelte.dev/tutorial/event-modifiers)

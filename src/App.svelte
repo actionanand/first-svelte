@@ -2,8 +2,14 @@
 	let name = 'Anand Raja';
   let age = 27;
 
+  $: upperCaseName = name.toUpperCase(); // svelte will always update whenever variable 'name' changes
+
   function increaseAge() {
     age +=1;
+  }
+
+  function changeName() {
+    name = 'ar'
   }
 </script>
 
@@ -13,6 +19,7 @@
 	}
 </style>
 
-<h1>Hello {name}!</h1>
+<h1>Hello {upperCaseName}!</h1>
 <h2>Your age is {age}</h2>
 <button on:click="{increaseAge}">Increase Age</button>
+<button on:click="{changeName}">Change Name</button>

@@ -69,6 +69,9 @@ var app = (function () {
     function set_input_value(input, value) {
         input.value = value == null ? '' : value;
     }
+    function toggle_class(element, name, toggle) {
+        element.classList[toggle ? 'add' : 'remove'](name);
+    }
     function custom_event(type, detail, bubbles = false) {
         const e = document.createEvent('CustomEvent');
         e.initCustomEvent(type, bubbles, false, detail);
@@ -430,22 +433,23 @@ var app = (function () {
     			t5 = text(/*description*/ ctx[3]);
     			if (!src_url_equal(img.src, img_src_value = /*userImage*/ ctx[2])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*userName*/ ctx[0]);
-    			attr_dev(img, "class", "svelte-1lpj6w2");
-    			add_location(img, file$1, 10, 6, 184);
-    			attr_dev(div0, "class", "thumb svelte-1lpj6w2");
-    			add_location(div0, file$1, 9, 4, 158);
-    			attr_dev(h1, "class", "svelte-1lpj6w2");
-    			add_location(h1, file$1, 13, 6, 272);
-    			attr_dev(h2, "class", "svelte-1lpj6w2");
-    			add_location(h2, file$1, 14, 6, 298);
-    			attr_dev(div1, "class", "user-data svelte-1lpj6w2");
-    			add_location(div1, file$1, 12, 4, 242);
-    			attr_dev(header, "class", "svelte-1lpj6w2");
+    			attr_dev(img, "class", "svelte-dt2t8p");
+    			add_location(img, file$1, 11, 6, 301);
+    			attr_dev(div0, "class", "thumb svelte-dt2t8p");
+    			toggle_class(div0, "thumb-placeholder", !/*userImage*/ ctx[2]);
+    			add_location(div0, file$1, 10, 4, 236);
+    			attr_dev(h1, "class", "svelte-dt2t8p");
+    			add_location(h1, file$1, 14, 6, 389);
+    			attr_dev(h2, "class", "svelte-dt2t8p");
+    			add_location(h2, file$1, 15, 6, 415);
+    			attr_dev(div1, "class", "user-data svelte-dt2t8p");
+    			add_location(div1, file$1, 13, 4, 359);
+    			attr_dev(header, "class", "svelte-dt2t8p");
     			add_location(header, file$1, 8, 2, 145);
-    			add_location(p, file$1, 18, 4, 373);
-    			attr_dev(div2, "class", "description svelte-1lpj6w2");
-    			add_location(div2, file$1, 17, 2, 343);
-    			attr_dev(div3, "class", "contact-card svelte-1lpj6w2");
+    			add_location(p, file$1, 21, 4, 570);
+    			attr_dev(div2, "class", "description svelte-dt2t8p");
+    			add_location(div2, file$1, 18, 2, 460);
+    			attr_dev(div3, "class", "contact-card svelte-dt2t8p");
     			add_location(div3, file$1, 7, 0, 116);
     		},
     		l: function claim(nodes) {
@@ -475,6 +479,10 @@ var app = (function () {
 
     			if (dirty & /*userName*/ 1) {
     				attr_dev(img, "alt", /*userName*/ ctx[0]);
+    			}
+
+    			if (dirty & /*userImage*/ 4) {
+    				toggle_class(div0, "thumb-placeholder", !/*userImage*/ ctx[2]);
     			}
 
     			if (dirty & /*userName*/ 1) set_data_dev(t1, /*userName*/ ctx[0]);

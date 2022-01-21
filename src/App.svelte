@@ -45,4 +45,4 @@
 <input type="text" bind:value="{title}" placeholder="job title">
 <input type="text" bind:value="{image}" placeholder="image url">
 <textarea rows="3" bind:value="{description}" placeholder="Please enter the description"></textarea>
-<ContactCard userName="{name}" jobTitle="{title}" description="{description}" userImage="{image}" />
+<ContactCard userName="{name}" jobTitle="{title}" {description} userImage="{image}" />

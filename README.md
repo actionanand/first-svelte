@@ -120,6 +120,14 @@ surge public my-project.surge.sh
 - [Replacement for git clone - degit](https://dev.to/vuelancer/replacement-for-git-clone-degit-3lf1)
 - [npm-run-all NPM Package](https://www.npmjs.com/package/npm-run-all)
 - [Images with Lorem.space - placeholder image generator](https://lorem.space/api)
+- [Building Svelte micro frontends with Podium](https://blog.logrocket.com/building-svelte-micro-frontends-podium/)
+- [CTO’s guide to Svelte – what can the rising frontend framework do for you?](https://tsh.io/blog/svelte-framework/)
+- [What I Like About Writing Styles with Svelte](https://css-tricks.com/what-i-like-about-writing-styles-with-svelte/)
+- [5 things I love about Svelte](https://dev.to/mauro_codes/5-things-i-love-about-svelte-39h9)
+- [Why Svelte is different - and awesome!](https://blog.jannikwempe.com/why-svelte-is-different-and-awesome)
+- [The Svelte Handbook](https://www.freecodecamp.org/news/the-svelte-handbook/)
+- [Use Svelte with SASS/SCSS in VSCode (example + cloneable repo)](https://daveceddia.com/svelte-with-sass-in-vscode/)
+- [How to use scss with Svelte?](https://dev.to/mefaba/how-to-use-scss-with-svelte-4c6o)
 
 ### Useful Resources & Links
 

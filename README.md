@@ -42,8 +42,8 @@ If you're using [Visual Studio Code](https://code.visualstudio.com/) we recommen
 ## If you face problem when running, Please create the app using the following command
 
 ```bash
-npx degit github:actionanand/first-svelte#1-skeleton my-app
-cd svelte-app
+npx degit github:actionanand/first-svelte#1-skeleton your-app-name
+cd your-app-name
 ```
 
 ## Building and running in production mode

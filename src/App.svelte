@@ -2,9 +2,9 @@
   import ContactCard from './ContactCard.svelte';
   import LifecycleHooks from './LifecycleHooks.svelte'
 
-  let name = "Anand";
-  let title = "";
-  let image = "";
+  let name = 'Anand Raja';
+  let title = '';
+  let image = 'https://nextluxury.com/wp-content/uploads/Develop-a-system-for-things-that-work-Successful-businessman.jpg';
   let description = "";
   let formState = 'empty';
   let createdContacts = [];
@@ -115,3 +115,4 @@
 {#if isLifeCycleOpen}
   <LifecycleHooks/>
 {/if}
+<br>

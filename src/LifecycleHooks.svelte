@@ -3,6 +3,7 @@
 
   let joke = { type: 'loading', value: { joke: "" } };
   let date = new Date();
+  let countDown = 20;
 
   onMount(async () => {
     const randomNum = rnd(300);
@@ -33,6 +34,7 @@
 
   let timer = setInterval(() => {
     date = new Date();
+    countDown -= 1;
   }, 1000);
 
   function rnd(max) {
@@ -41,14 +43,14 @@
 </script>
 
 <div class="lifecycle-card">
-  <p>Component will be un-mounted in 20s.</p>
+  <p>This component will be un-mounted in <span class="count-span">{countDown}s</span>.</p>
   <p>Current Time: <span class="date-span">{date.toLocaleTimeString()}</span></p>
   {#if joke.type === 'loading'}
     <p>Loading...</p>
   {:else if joke.type === 'NoSuchQuoteException'}
     <p>Sorry, {joke.value} Please try again with different ID</p>
   {:else}
-    <p>{joke.value.joke}</p>
+    <p>Joke: {joke.value.joke}</p>
   {/if}
 </div>
 
@@ -64,6 +66,11 @@
 
   .date-span {
     color: green;
+    font-weight: bold;
+  }
+
+  .count-span {
+    color: red;
     font-weight: bold;
   }
 </style>

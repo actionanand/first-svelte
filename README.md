@@ -119,6 +119,7 @@ surge public my-project.surge.sh
 
 - [Replacement for git clone - degit](https://dev.to/vuelancer/replacement-for-git-clone-degit-3lf1)
 - [npm-run-all NPM Package](https://www.npmjs.com/package/npm-run-all)
+- [Images with Lorem.space - placeholder image generator](https://lorem.space/api)
 
 ### Useful Resources & Links
 

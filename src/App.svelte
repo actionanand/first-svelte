@@ -2,9 +2,9 @@
   import ContactCard from './ContactCard.svelte';
   import LifecycleHooks from './LifecycleHooks.svelte'
 
-  let name = 'Anand Raja';
-  let title = '';
-  let image = 'https://nextluxury.com/wp-content/uploads/Develop-a-system-for-things-that-work-Successful-businessman.jpg';
+  let name = 'Mr. X';
+  let title = 'Self own job';
+  let image = 'https://api.lorem.space/image/face?w=150&h=150';
   let description = "";
   let formState = 'empty';
   let createdContacts = [];
@@ -63,19 +63,19 @@
 <div id="form">
   <div class="form-control">
     <label for="userName">User Name</label>
-    <input type="text" bind:value={name} id="userName" />
+    <input type="text" bind:value={name} id="userName" placeholder="Add your name"/>
   </div>
   <div class="form-control">
     <label for="jobTitle">Job Title</label>
-    <input type="text" bind:value={title} id="jobTitle" />
+    <input type="text" bind:value={title} id="jobTitle" placeholder="Add your job title" />
   </div>
   <div class="form-control">
     <label for="image">Image URL</label>
-    <input type="url" bind:value={image} id="image" />
+    <input type="url" bind:value={image} id="image" placeholder="Add your image url" />
   </div>
   <div class="form-control">
     <label for="desc">Description</label>
-    <textarea rows="3" bind:value={description} id="desc" />
+    <textarea rows="3" bind:value={description} id="desc" placeholder="Add some description."/>
   </div>
 </div>
 

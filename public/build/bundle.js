@@ -1064,12 +1064,12 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[16] = list[i];
-    	child_ctx[18] = i;
+    	child_ctx[17] = list[i];
+    	child_ctx[19] = i;
     	return child_ctx;
     }
 
-    // (91:0) {#if isFirstElDeleted}
+    // (98:0) {#if isFirstElDeleted}
     function create_if_block_2(ctx) {
     	let p;
     	let span;
@@ -1081,9 +1081,9 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Delete First";
     			t1 = text(" button won't work!");
-    			attr_dev(span, "class", "note-style svelte-jqfvc7");
-    			add_location(span, file, 91, 5, 2367);
-    			add_location(p, file, 91, 2, 2364);
+    			attr_dev(span, "class", "note-style svelte-60vd36");
+    			add_location(span, file, 98, 5, 2487);
+    			add_location(p, file, 98, 2, 2484);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -1099,14 +1099,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(91:0) {#if isFirstElDeleted}",
+    		source: "(98:0) {#if isFirstElDeleted}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (97:0) {:else}
+    // (104:0) {:else}
     function create_else_block_1(ctx) {
     	let p;
 
@@ -1114,7 +1114,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Please fill the form.";
-    			add_location(p, file, 97, 2, 2506);
+    			add_location(p, file, 104, 2, 2626);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -1128,14 +1128,14 @@ var app = (function () {
     		block,
     		id: create_else_block_1.name,
     		type: "else",
-    		source: "(97:0) {:else}",
+    		source: "(104:0) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (95:0) {#if formState === 'invalid'}
+    // (102:0) {#if formState === 'invalid'}
     function create_if_block_1(ctx) {
     	let p;
 
@@ -1143,7 +1143,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Invalid Inputs";
-    			add_location(p, file, 95, 2, 2474);
+    			add_location(p, file, 102, 2, 2594);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -1157,14 +1157,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(95:0) {#if formState === 'invalid'}",
+    		source: "(102:0) {#if formState === 'invalid'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (109:0) {:else}
+    // (116:0) {:else}
     function create_else_block(ctx) {
     	let p;
 
@@ -1172,7 +1172,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Please add some contacts. We found none!";
-    			add_location(p, file, 109, 2, 2778);
+    			add_location(p, file, 116, 2, 2898);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -1186,18 +1186,18 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(109:0) {:else}",
+    		source: "(116:0) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (101:0) {#each createdContacts as contact, index (contact.id)}
+    // (108:0) {#each createdContacts as contact, index (contact.id)}
     function create_each_block(key_1, ctx) {
     	let h2;
     	let t0;
-    	let t1_value = /*index*/ ctx[18] + 1 + "";
+    	let t1_value = /*index*/ ctx[19] + 1 + "";
     	let t1;
     	let t2;
     	let contactcard;
@@ -1205,10 +1205,10 @@ var app = (function () {
 
     	contactcard = new ContactCard({
     			props: {
-    				userName: /*contact*/ ctx[16].name,
-    				jobTitle: /*contact*/ ctx[16].title,
-    				description: /*contact*/ ctx[16].desc,
-    				userImage: /*contact*/ ctx[16].imageUrl
+    				userName: /*contact*/ ctx[17].name,
+    				jobTitle: /*contact*/ ctx[17].title,
+    				description: /*contact*/ ctx[17].desc,
+    				userImage: /*contact*/ ctx[17].imageUrl
     			},
     			$$inline: true
     		});
@@ -1222,7 +1222,7 @@ var app = (function () {
     			t1 = text(t1_value);
     			t2 = space();
     			create_component(contactcard.$$.fragment);
-    			add_location(h2, file, 101, 2, 2599);
+    			add_location(h2, file, 108, 2, 2719);
     			this.first = h2;
     		},
     		m: function mount(target, anchor) {
@@ -1235,12 +1235,12 @@ var app = (function () {
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if ((!current || dirty & /*createdContacts*/ 64) && t1_value !== (t1_value = /*index*/ ctx[18] + 1 + "")) set_data_dev(t1, t1_value);
+    			if ((!current || dirty & /*createdContacts*/ 128) && t1_value !== (t1_value = /*index*/ ctx[19] + 1 + "")) set_data_dev(t1, t1_value);
     			const contactcard_changes = {};
-    			if (dirty & /*createdContacts*/ 64) contactcard_changes.userName = /*contact*/ ctx[16].name;
-    			if (dirty & /*createdContacts*/ 64) contactcard_changes.jobTitle = /*contact*/ ctx[16].title;
-    			if (dirty & /*createdContacts*/ 64) contactcard_changes.description = /*contact*/ ctx[16].desc;
-    			if (dirty & /*createdContacts*/ 64) contactcard_changes.userImage = /*contact*/ ctx[16].imageUrl;
+    			if (dirty & /*createdContacts*/ 128) contactcard_changes.userName = /*contact*/ ctx[17].name;
+    			if (dirty & /*createdContacts*/ 128) contactcard_changes.jobTitle = /*contact*/ ctx[17].title;
+    			if (dirty & /*createdContacts*/ 128) contactcard_changes.description = /*contact*/ ctx[17].desc;
+    			if (dirty & /*createdContacts*/ 128) contactcard_changes.userImage = /*contact*/ ctx[17].imageUrl;
     			contactcard.$set(contactcard_changes);
     		},
     		i: function intro(local) {
@@ -1263,14 +1263,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(101:0) {#each createdContacts as contact, index (contact.id)}",
+    		source: "(108:0) {#each createdContacts as contact, index (contact.id)}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (115:0) {#if isLifeCycleOpen}
+    // (122:0) {#if isLifeCycleOpen}
     function create_if_block(ctx) {
     	let lifecyclehooks;
     	let current;
@@ -1302,7 +1302,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(115:0) {#if isLifeCycleOpen}",
+    		source: "(122:0) {#if isLifeCycleOpen}",
     		ctx
     	});
 
@@ -1310,60 +1310,63 @@ var app = (function () {
     }
 
     function create_fragment(ctx) {
+    	let h1;
+    	let t0;
+    	let t1;
     	let div4;
     	let div0;
     	let label0;
-    	let t1;
+    	let t3;
     	let input0;
-    	let t2;
+    	let t4;
     	let div1;
     	let label1;
-    	let t4;
+    	let t6;
     	let input1;
-    	let t5;
+    	let t7;
     	let div2;
     	let label2;
-    	let t7;
+    	let t9;
     	let input2;
-    	let t8;
+    	let t10;
     	let div3;
     	let label3;
-    	let t10;
+    	let t12;
     	let textarea;
-    	let t11;
-    	let button0;
     	let t13;
-    	let button1;
+    	let button0;
     	let t15;
-    	let button2;
+    	let button1;
     	let t17;
-    	let button3;
-    	let t18_value = (/*isLifeCycleOpen*/ ctx[0] ? 'Hide ' : 'Show ') + "";
-    	let t18;
+    	let button2;
     	let t19;
+    	let button3;
+    	let t20_value = (/*isLifeCycleOpen*/ ctx[1] ? 'Hide ' : 'Show ') + "";
     	let t20;
     	let t21;
     	let t22;
-    	let each_blocks = [];
-    	let each_1_lookup = new Map();
     	let t23;
     	let t24;
+    	let each_blocks = [];
+    	let each_1_lookup = new Map();
+    	let t25;
+    	let t26;
     	let br;
     	let current;
     	let mounted;
     	let dispose;
-    	let if_block0 = /*isFirstElDeleted*/ ctx[7] && create_if_block_2(ctx);
+    	let if_block0 = /*isFirstElDeleted*/ ctx[8] && create_if_block_2(ctx);
 
     	function select_block_type(ctx, dirty) {
-    		if (/*formState*/ ctx[5] === 'invalid') return create_if_block_1;
+    		if (/*formState*/ ctx[6] === 'invalid') return create_if_block_1;
     		return create_else_block_1;
     	}
 
     	let current_block_type = select_block_type(ctx);
     	let if_block1 = current_block_type(ctx);
-    	let each_value = /*createdContacts*/ ctx[6];
+    	let each_value = /*createdContacts*/ ctx[7];
     	validate_each_argument(each_value);
-    	const get_key = ctx => /*contact*/ ctx[16].id;
+    	const get_key = ctx => /*contact*/ ctx[17].id;
     	validate_each_keys(ctx, each_value, get_each_context, get_key);
 
     	for (let i = 0; i < each_value.length; i += 1) {
@@ -1378,52 +1381,55 @@ var app = (function () {
     		each_1_else = create_else_block(ctx);
     	}
 
-    	let if_block2 = /*isLifeCycleOpen*/ ctx[0] && create_if_block(ctx);
+    	let if_block2 = /*isLifeCycleOpen*/ ctx[1] && create_if_block(ctx);
 
     	const block = {
     		c: function create() {
+    			h1 = element("h1");
+    			t0 = text(/*appName*/ ctx[0]);
+    			t1 = space();
     			div4 = element("div");
     			div0 = element("div");
     			label0 = element("label");
     			label0.textContent = "User Name";
-    			t1 = space();
+    			t3 = space();
     			input0 = element("input");
-    			t2 = space();
+    			t4 = space();
     			div1 = element("div");
     			label1 = element("label");
     			label1.textContent = "Job Title";
-    			t4 = space();
+    			t6 = space();
     			input1 = element("input");
-    			t5 = space();
+    			t7 = space();
     			div2 = element("div");
     			label2 = element("label");
     			label2.textContent = "Image URL";
-    			t7 = space();
+    			t9 = space();
     			input2 = element("input");
-    			t8 = space();
+    			t10 = space();
     			div3 = element("div");
     			label3 = element("label");
     			label3.textContent = "Description";
-    			t10 = space();
+    			t12 = space();
     			textarea = element("textarea");
-    			t11 = space();
+    			t13 = space();
     			button0 = element("button");
     			button0.textContent = "Add Contact";
-    			t13 = space();
+    			t15 = space();
     			button1 = element("button");
     			button1.textContent = "Delete First";
-    			t15 = space();
+    			t17 = space();
     			button2 = element("button");
     			button2.textContent = "Delete Last";
-    			t17 = space();
+    			t19 = space();
     			button3 = element("button");
-    			t18 = text(t18_value);
-    			t19 = text(" Lifecycle Hooks");
-    			t20 = space();
-    			if (if_block0) if_block0.c();
-    			t21 = space();
-    			if_block1.c();
+    			t20 = text(t20_value);
+    			t21 = text(" Lifecycle Hooks");
     			t22 = space();
+    			if (if_block0) if_block0.c();
+    			t23 = space();
+    			if_block1.c();
+    			t24 = space();
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
@@ -1433,94 +1439,99 @@ var app = (function () {
     				each_1_else.c();
     			}
 
-    			t23 = space();
+    			t25 = space();
     			if (if_block2) if_block2.c();
-    			t24 = space();
+    			t26 = space();
     			br = element("br");
+    			attr_dev(h1, "class", "capitalize-it svelte-60vd36");
+    			add_location(h1, file, 68, 0, 1407);
     			attr_dev(label0, "for", "userName");
-    			add_location(label0, file, 64, 4, 1377);
+    			add_location(label0, file, 71, 4, 1497);
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "id", "userName");
     			attr_dev(input0, "placeholder", "Add your name");
-    			add_location(input0, file, 65, 4, 1421);
+    			add_location(input0, file, 72, 4, 1541);
     			attr_dev(div0, "class", "form-control");
-    			add_location(div0, file, 63, 2, 1346);
+    			add_location(div0, file, 70, 2, 1466);
     			attr_dev(label1, "for", "jobTitle");
-    			add_location(label1, file, 68, 4, 1544);
+    			add_location(label1, file, 75, 4, 1664);
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "id", "jobTitle");
     			attr_dev(input1, "placeholder", "Add your job title");
-    			add_location(input1, file, 69, 4, 1588);
+    			add_location(input1, file, 76, 4, 1708);
     			attr_dev(div1, "class", "form-control");
-    			add_location(div1, file, 67, 2, 1513);
+    			add_location(div1, file, 74, 2, 1633);
     			attr_dev(label2, "for", "image");
-    			add_location(label2, file, 72, 4, 1718);
+    			add_location(label2, file, 79, 4, 1838);
     			attr_dev(input2, "type", "url");
     			attr_dev(input2, "id", "image");
     			attr_dev(input2, "placeholder", "Add your image url");
-    			add_location(input2, file, 73, 4, 1759);
+    			add_location(input2, file, 80, 4, 1879);
     			attr_dev(div2, "class", "form-control");
-    			add_location(div2, file, 71, 2, 1687);
+    			add_location(div2, file, 78, 2, 1807);
     			attr_dev(label3, "for", "desc");
-    			add_location(label3, file, 76, 4, 1885);
+    			add_location(label3, file, 83, 4, 2005);
     			attr_dev(textarea, "rows", "3");
     			attr_dev(textarea, "id", "desc");
     			attr_dev(textarea, "placeholder", "Add some description.");
-    			add_location(textarea, file, 77, 4, 1927);
+    			add_location(textarea, file, 84, 4, 2047);
     			attr_dev(div3, "class", "form-control");
-    			add_location(div3, file, 75, 2, 1854);
+    			add_location(div3, file, 82, 2, 1974);
     			attr_dev(div4, "id", "form");
-    			attr_dev(div4, "class", "svelte-jqfvc7");
-    			add_location(div4, file, 62, 0, 1328);
-    			add_location(button0, file, 81, 0, 2036);
-    			add_location(button1, file, 82, 0, 2089);
-    			add_location(button2, file, 83, 0, 2151);
-    			add_location(button3, file, 86, 0, 2210);
-    			add_location(br, file, 117, 0, 2910);
+    			attr_dev(div4, "class", "svelte-60vd36");
+    			add_location(div4, file, 69, 0, 1448);
+    			add_location(button0, file, 88, 0, 2156);
+    			add_location(button1, file, 89, 0, 2209);
+    			add_location(button2, file, 90, 0, 2271);
+    			add_location(button3, file, 93, 0, 2330);
+    			add_location(br, file, 124, 0, 3030);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, h1, anchor);
+    			append_dev(h1, t0);
+    			insert_dev(target, t1, anchor);
     			insert_dev(target, div4, anchor);
     			append_dev(div4, div0);
     			append_dev(div0, label0);
-    			append_dev(div0, t1);
+    			append_dev(div0, t3);
     			append_dev(div0, input0);
-    			set_input_value(input0, /*name*/ ctx[1]);
-    			append_dev(div4, t2);
+    			set_input_value(input0, /*name*/ ctx[2]);
+    			append_dev(div4, t4);
     			append_dev(div4, div1);
     			append_dev(div1, label1);
-    			append_dev(div1, t4);
+    			append_dev(div1, t6);
     			append_dev(div1, input1);
-    			set_input_value(input1, /*title*/ ctx[2]);
-    			append_dev(div4, t5);
+    			set_input_value(input1, /*title*/ ctx[3]);
+    			append_dev(div4, t7);
     			append_dev(div4, div2);
     			append_dev(div2, label2);
-    			append_dev(div2, t7);
+    			append_dev(div2, t9);
     			append_dev(div2, input2);
-    			set_input_value(input2, /*image*/ ctx[3]);
-    			append_dev(div4, t8);
+    			set_input_value(input2, /*image*/ ctx[4]);
+    			append_dev(div4, t10);
     			append_dev(div4, div3);
     			append_dev(div3, label3);
-    			append_dev(div3, t10);
+    			append_dev(div3, t12);
     			append_dev(div3, textarea);
-    			set_input_value(textarea, /*description*/ ctx[4]);
-    			insert_dev(target, t11, anchor);
-    			insert_dev(target, button0, anchor);
+    			set_input_value(textarea, /*description*/ ctx[5]);
     			insert_dev(target, t13, anchor);
-    			insert_dev(target, button1, anchor);
+    			insert_dev(target, button0, anchor);
     			insert_dev(target, t15, anchor);
-    			insert_dev(target, button2, anchor);
+    			insert_dev(target, button1, anchor);
     			insert_dev(target, t17, anchor);
+    			insert_dev(target, button2, anchor);
+    			insert_dev(target, t19, anchor);
     			insert_dev(target, button3, anchor);
-    			append_dev(button3, t18);
-    			append_dev(button3, t19);
-    			insert_dev(target, t20, anchor);
-    			if (if_block0) if_block0.m(target, anchor);
-    			insert_dev(target, t21, anchor);
-    			if_block1.m(target, anchor);
+    			append_dev(button3, t20);
+    			append_dev(button3, t21);
     			insert_dev(target, t22, anchor);
+    			if (if_block0) if_block0.m(target, anchor);
+    			insert_dev(target, t23, anchor);
+    			if_block1.m(target, anchor);
+    			insert_dev(target, t24, anchor);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(target, anchor);
@@ -1530,51 +1541,53 @@ var app = (function () {
     				each_1_else.m(target, anchor);
     			}
 
-    			insert_dev(target, t23, anchor);
+    			insert_dev(target, t25, anchor);
     			if (if_block2) if_block2.m(target, anchor);
-    			insert_dev(target, t24, anchor);
+    			insert_dev(target, t26, anchor);
     			insert_dev(target, br, anchor);
     			current = true;
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[11]),
-    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[12]),
-    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[13]),
-    					listen_dev(textarea, "input", /*textarea_input_handler*/ ctx[14]),
-    					listen_dev(button0, "click", /*addContact*/ ctx[8], false, false, false),
-    					listen_dev(button1, "click", /*deleteFirstEl*/ ctx[9], { once: true }, false, false),
-    					listen_dev(button2, "click", /*deleteLastEl*/ ctx[10], false, false, false),
-    					listen_dev(button3, "click", /*click_handler*/ ctx[15], false, false, false)
+    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[12]),
+    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[13]),
+    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[14]),
+    					listen_dev(textarea, "input", /*textarea_input_handler*/ ctx[15]),
+    					listen_dev(button0, "click", /*addContact*/ ctx[9], false, false, false),
+    					listen_dev(button1, "click", /*deleteFirstEl*/ ctx[10], { once: true }, false, false),
+    					listen_dev(button2, "click", /*deleteLastEl*/ ctx[11], false, false, false),
+    					listen_dev(button3, "click", /*click_handler*/ ctx[16], false, false, false)
     				];
 
     				mounted = true;
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*name*/ 2 && input0.value !== /*name*/ ctx[1]) {
-    				set_input_value(input0, /*name*/ ctx[1]);
+    			if (!current || dirty & /*appName*/ 1) set_data_dev(t0, /*appName*/ ctx[0]);
+
+    			if (dirty & /*name*/ 4 && input0.value !== /*name*/ ctx[2]) {
+    				set_input_value(input0, /*name*/ ctx[2]);
     			}
 
-    			if (dirty & /*title*/ 4 && input1.value !== /*title*/ ctx[2]) {
-    				set_input_value(input1, /*title*/ ctx[2]);
+    			if (dirty & /*title*/ 8 && input1.value !== /*title*/ ctx[3]) {
+    				set_input_value(input1, /*title*/ ctx[3]);
     			}
 
-    			if (dirty & /*image*/ 8) {
-    				set_input_value(input2, /*image*/ ctx[3]);
+    			if (dirty & /*image*/ 16) {
+    				set_input_value(input2, /*image*/ ctx[4]);
     			}
 
-    			if (dirty & /*description*/ 16) {
-    				set_input_value(textarea, /*description*/ ctx[4]);
+    			if (dirty & /*description*/ 32) {
+    				set_input_value(textarea, /*description*/ ctx[5]);
     			}
 
-    			if ((!current || dirty & /*isLifeCycleOpen*/ 1) && t18_value !== (t18_value = (/*isLifeCycleOpen*/ ctx[0] ? 'Hide ' : 'Show ') + "")) set_data_dev(t18, t18_value);
+    			if ((!current || dirty & /*isLifeCycleOpen*/ 2) && t20_value !== (t20_value = (/*isLifeCycleOpen*/ ctx[1] ? 'Hide ' : 'Show ') + "")) set_data_dev(t20, t20_value);
 
-    			if (/*isFirstElDeleted*/ ctx[7]) {
+    			if (/*isFirstElDeleted*/ ctx[8]) {
     				if (if_block0) ; else {
     					if_block0 = create_if_block_2(ctx);
     					if_block0.c();
-    					if_block0.m(t21.parentNode, t21);
+    					if_block0.m(t23.parentNode, t23);
     				}
     			} else if (if_block0) {
     				if_block0.d(1);
@@ -1587,16 +1600,16 @@ var app = (function () {
 
     				if (if_block1) {
     					if_block1.c();
-    					if_block1.m(t22.parentNode, t22);
+    					if_block1.m(t24.parentNode, t24);
     				}
     			}
 
-    			if (dirty & /*createdContacts*/ 64) {
-    				each_value = /*createdContacts*/ ctx[6];
+    			if (dirty & /*createdContacts*/ 128) {
+    				each_value = /*createdContacts*/ ctx[7];
     				validate_each_argument(each_value);
     				group_outros();
     				validate_each_keys(ctx, each_value, get_each_context, get_key);
-    				each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx, each_value, each_1_lookup, t23.parentNode, outro_and_destroy_block, create_each_block, t23, get_each_context);
+    				each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx, each_value, each_1_lookup, t25.parentNode, outro_and_destroy_block, create_each_block, t25, get_each_context);
     				check_outros();
 
     				if (each_value.length) {
@@ -1607,20 +1620,20 @@ var app = (function () {
     				} else if (!each_1_else) {
     					each_1_else = create_else_block(ctx);
     					each_1_else.c();
-    					each_1_else.m(t23.parentNode, t23);
+    					each_1_else.m(t25.parentNode, t25);
     				}
     			}
 
-    			if (/*isLifeCycleOpen*/ ctx[0]) {
+    			if (/*isLifeCycleOpen*/ ctx[1]) {
     				if (if_block2) {
-    					if (dirty & /*isLifeCycleOpen*/ 1) {
+    					if (dirty & /*isLifeCycleOpen*/ 2) {
     						transition_in(if_block2, 1);
     					}
     				} else {
     					if_block2 = create_if_block(ctx);
     					if_block2.c();
     					transition_in(if_block2, 1);
-    					if_block2.m(t24.parentNode, t24);
+    					if_block2.m(t26.parentNode, t26);
     				}
     			} else if (if_block2) {
     				group_outros();
@@ -1651,29 +1664,31 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(h1);
+    			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(div4);
-    			if (detaching) detach_dev(t11);
-    			if (detaching) detach_dev(button0);
     			if (detaching) detach_dev(t13);
-    			if (detaching) detach_dev(button1);
+    			if (detaching) detach_dev(button0);
     			if (detaching) detach_dev(t15);
-    			if (detaching) detach_dev(button2);
+    			if (detaching) detach_dev(button1);
     			if (detaching) detach_dev(t17);
+    			if (detaching) detach_dev(button2);
+    			if (detaching) detach_dev(t19);
     			if (detaching) detach_dev(button3);
-    			if (detaching) detach_dev(t20);
-    			if (if_block0) if_block0.d(detaching);
-    			if (detaching) detach_dev(t21);
-    			if_block1.d(detaching);
     			if (detaching) detach_dev(t22);
+    			if (if_block0) if_block0.d(detaching);
+    			if (detaching) detach_dev(t23);
+    			if_block1.d(detaching);
+    			if (detaching) detach_dev(t24);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].d(detaching);
     			}
 
     			if (each_1_else) each_1_else.d(detaching);
-    			if (detaching) detach_dev(t23);
+    			if (detaching) detach_dev(t25);
     			if (if_block2) if_block2.d(detaching);
-    			if (detaching) detach_dev(t24);
+    			if (detaching) detach_dev(t26);
     			if (detaching) detach_dev(br);
     			mounted = false;
     			run_all(dispose);
@@ -1694,6 +1709,7 @@ var app = (function () {
     function instance($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('App', slots, []);
+    	let { appName } = $$props;
     	let name = 'Mr. X';
     	let title = 'Self own job';
     	let image = 'https://api.lorem.space/image/face?w=150&h=150';
@@ -1707,13 +1723,13 @@ var app = (function () {
     	// $: console.log(name);
     	function addContact() {
     		if ((name.trim() === '', title.trim() === '', image.trim() === '', description.trim() === '')) {
-    			$$invalidate(5, formState = 'invalid');
+    			$$invalidate(6, formState = 'invalid');
     			return;
     		}
 
-    		$$invalidate(5, formState = 'done');
+    		$$invalidate(6, formState = 'done');
 
-    		$$invalidate(6, createdContacts = [
+    		$$invalidate(7, createdContacts = [
     			...createdContacts,
     			{
     				id: Math.random(),
@@ -1726,15 +1742,15 @@ var app = (function () {
     	}
 
     	function deleteFirstEl() {
-    		$$invalidate(6, createdContacts = createdContacts.slice(1));
-    		$$invalidate(7, isFirstElDeleted = true);
+    		$$invalidate(7, createdContacts = createdContacts.slice(1));
+    		$$invalidate(8, isFirstElDeleted = true);
     	}
 
     	function deleteLastEl() {
-    		$$invalidate(6, createdContacts = createdContacts.slice(0, -1));
+    		$$invalidate(7, createdContacts = createdContacts.slice(0, -1));
     	}
 
-    	const writable_props = [];
+    	const writable_props = ['appName'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<App> was created with unknown prop '${key}'`);
@@ -1742,29 +1758,34 @@ var app = (function () {
 
     	function input0_input_handler() {
     		name = this.value;
-    		$$invalidate(1, name);
+    		$$invalidate(2, name);
     	}
 
     	function input1_input_handler() {
     		title = this.value;
-    		$$invalidate(2, title);
+    		$$invalidate(3, title);
     	}
 
     	function input2_input_handler() {
     		image = this.value;
-    		$$invalidate(3, image);
+    		$$invalidate(4, image);
     	}
 
     	function textarea_input_handler() {
     		description = this.value;
-    		$$invalidate(4, description);
+    		$$invalidate(5, description);
     	}
 
-    	const click_handler = () => $$invalidate(0, isLifeCycleOpen = !isLifeCycleOpen);
+    	const click_handler = () => $$invalidate(1, isLifeCycleOpen = !isLifeCycleOpen);
+
+    	$$self.$$set = $$props => {
+    		if ('appName' in $$props) $$invalidate(0, appName = $$props.appName);
+    	};
 
     	$$self.$capture_state = () => ({
     		ContactCard,
     		LifecycleHooks,
+    		appName,
     		name,
     		title,
     		image,
@@ -1779,14 +1800,15 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('name' in $$props) $$invalidate(1, name = $$props.name);
-    		if ('title' in $$props) $$invalidate(2, title = $$props.title);
-    		if ('image' in $$props) $$invalidate(3, image = $$props.image);
-    		if ('description' in $$props) $$invalidate(4, description = $$props.description);
-    		if ('formState' in $$props) $$invalidate(5, formState = $$props.formState);
-    		if ('createdContacts' in $$props) $$invalidate(6, createdContacts = $$props.createdContacts);
-    		if ('isFirstElDeleted' in $$props) $$invalidate(7, isFirstElDeleted = $$props.isFirstElDeleted);
-    		if ('isLifeCycleOpen' in $$props) $$invalidate(0, isLifeCycleOpen = $$props.isLifeCycleOpen);
+    		if ('appName' in $$props) $$invalidate(0, appName = $$props.appName);
+    		if ('name' in $$props) $$invalidate(2, name = $$props.name);
+    		if ('title' in $$props) $$invalidate(3, title = $$props.title);
+    		if ('image' in $$props) $$invalidate(4, image = $$props.image);
+    		if ('description' in $$props) $$invalidate(5, description = $$props.description);
+    		if ('formState' in $$props) $$invalidate(6, formState = $$props.formState);
+    		if ('createdContacts' in $$props) $$invalidate(7, createdContacts = $$props.createdContacts);
+    		if ('isFirstElDeleted' in $$props) $$invalidate(8, isFirstElDeleted = $$props.isFirstElDeleted);
+    		if ('isLifeCycleOpen' in $$props) $$invalidate(1, isLifeCycleOpen = $$props.isLifeCycleOpen);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -1794,11 +1816,11 @@ var app = (function () {
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty & /*isLifeCycleOpen*/ 1) {
+    		if ($$self.$$.dirty & /*isLifeCycleOpen*/ 2) {
     			if (isLifeCycleOpen) {
     				setTimeout(
     					() => {
-    						$$invalidate(0, isLifeCycleOpen = false);
+    						$$invalidate(1, isLifeCycleOpen = false);
     					},
     					20000
     				);
@@ -1807,6 +1829,7 @@ var app = (function () {
     	};
 
     	return [
+    		appName,
     		isLifeCycleOpen,
     		name,
     		title,
@@ -1829,7 +1852,7 @@ var app = (function () {
     class App extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance, create_fragment, safe_not_equal, {});
+    		init(this, options, instance, create_fragment, safe_not_equal, { appName: 0 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -1837,11 +1860,31 @@ var app = (function () {
     			options,
     			id: create_fragment.name
     		});
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+
+    		if (/*appName*/ ctx[0] === undefined && !('appName' in props)) {
+    			console.warn("<App> was created without expected prop 'appName'");
+    		}
+    	}
+
+    	get appName() {
+    		throw new Error("<App>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set appName(value) {
+    		throw new Error("<App>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
     const app = new App({
-    	target: document.body
+    	// target: document.body,
+      target: document.querySelector('#app'),
+      // target: document.getElementById('app'),
+      props: {
+        appName: 'first svelte app'
+      }
     });
 
     return app;

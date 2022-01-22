@@ -2,6 +2,8 @@
   import ContactCard from './ContactCard.svelte';
   import LifecycleHooks from './LifecycleHooks.svelte'
 
+  export let appName;
+
   let name = 'Mr. X';
   let title = 'Self own job';
   let image = 'https://api.lorem.space/image/face?w=150&h=150';
@@ -58,8 +60,13 @@
     color: red;
     font-weight: bold;
   }
+
+  .capitalize-it {
+    text-transform: capitalize;
+  }
 </style>
 
+<h1 class="capitalize-it">{appName}</h1>
 <div id="form">
   <div class="form-control">
     <label for="userName">User Name</label>
